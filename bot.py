@@ -227,7 +227,7 @@ async def VidWatermarkAdder(bot, cmd):
 		duration = metadata.get('duration').seconds
 	the_media_file_name = os.path.basename(the_media)
 	main_file_name = os.path.splitext(the_media_file_name)[0]
-	output_vid = main_file_name + "_[" + str(cmd.from_user.id) + "]_[" + str(time.time()) + "]_[@M4SK3R1N]" + ".mp4"
+	output_vid = main_file_name + "_[" + str(cmd.from_user.id) + "]_[" + str(time.time()) + "]_[@Powdrs]" + ".mp4"
 	progress = Config.DOWN_PATH + "/WatermarkAdder/" + str(cmd.from_user.id) + "/progress.txt"
 	try:
 		output_vid = await vidmark(the_media, editable, progress, watermark_path, output_vid, duration, logs_msg, status, preset, watermark_position, watermark_size)
@@ -387,7 +387,7 @@ async def button(bot, cmd: CallbackQuery):
 				user = await bot.get_chat_member(int(Config.UPDATES_CHANNEL), cmd.message.chat.id)
 				if user.status == "kicked":
 					await cmd.message.edit(
-						text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/M4SK3R1N).",
+						text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/Painofwords).",
 						parse_mode="markdown",
 						disable_web_page_preview=True
 					)
@@ -410,7 +410,7 @@ async def button(bot, cmd: CallbackQuery):
 				return
 			except Exception:
 				await cmd.message.edit(
-					text="Something went Wrong. Contact my [Support Group](https://t.me/M4SK3R1N).",
+					text="Something went Wrong. Contact my [Support Group](https://t.me/Painofwords).",
 					parse_mode="markdown",
 					disable_web_page_preview=True
 				)
@@ -418,7 +418,7 @@ async def button(bot, cmd: CallbackQuery):
 		await cmd.message.edit(
 			text=Config.USAGE_WATERMARK_ADDER,
 			parse_mode="Markdown",
-			reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Developer", url="https://t.me/M4SK3R"), InlineKeyboardButton("Support Group", url="https://t.me/M4SK3R1N")], [InlineKeyboardButton("Bots Channel", url="https://t.me/ViralTwitterHot")]]),
+			reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Developer", url="https://t.me/Powdrs"), InlineKeyboardButton("Support Group", url="https://t.me/Painofwords")], [InlineKeyboardButton("Bots Channel", url="https://t.me/painofwords")]]),
 			disable_web_page_preview=True
 		)
 
@@ -435,7 +435,7 @@ async def button(bot, cmd: CallbackQuery):
 				user = await bot.get_chat_member(int(Config.UPDATES_CHANNEL), cmd.message.chat.id)
 				if user.status == "kicked":
 					await cmd.message.edit(
-						text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/M4SK3R1N).",
+						text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/Powdrs).",
 						parse_mode="markdown",
 						disable_web_page_preview=True
 					)
@@ -458,7 +458,7 @@ async def button(bot, cmd: CallbackQuery):
 				return
 			except Exception:
 				await cmd.message.edit(
-					text="Something went Wrong. Contact my [Support Group](https://t.me/DevsZone).",
+					text="Something went Wrong. Contact my [Support Group](https://t.me/Powdrs).",
 					parse_mode="markdown",
 					disable_web_page_preview=True
 				)
